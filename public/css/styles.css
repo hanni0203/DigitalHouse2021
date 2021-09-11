@@ -1,0 +1,196 @@
+/*****************************
+          CUERPO
+******************************/
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+    margin:0;
+}
+/*****************************
+    CABECERA PRINCIPAL
+******************************/
+.main-header{
+    background-color:#EAC926;
+}
+
+/*****************************
+    CABECERA PRINCIPAL
+   LOGO MERCADO LIEBRE
+******************************/
+.img-logo{
+    max-width: 200px;
+    display: block;
+    padding: 20px;
+}
+
+/*****************************
+    CABECERA PRINCIPAL
+     INPUT BUSQUEDA
+******************************/
+.input-busqueda{
+    margin-left: 20px;
+}
+
+/*****************************
+    CABECERA PRINCIPAL
+       IMG LUPA
+******************************/
+.ilupa{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #666;
+    margin-top: 3px;
+    margin-left: 20px;
+    
+}
+
+.ilupa i{
+line-height: 6mm;
+margin:auto
+}
+
+/*****************************
+    CABECERA PRINCIPAL
+     TEXTO COMPRÁ CUOTAS
+******************************/
+
+.p-header{
+    text-align: center;
+}
+
+/*****************************
+    CABECERA PRINCIPAL
+     MENÚ HAMBURGUESA
+******************************/
+
+.nav-header ul{
+    list-style: none;
+   padding: 0;
+}
+
+.burger-menu {
+    background: #1259c3;;
+    color: white;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 2mm;
+    border-color: #1259c3;;
+}
+
+i.elementi{
+    line-height: 30px;
+}
+
+/*****************************
+         BANNER
+******************************/
+
+.banner{
+    display: flex;
+    flex-direction: column;
+}
+
+.banner.img{
+    max-width: auto;
+    height: 500px;
+}
+
+/*****************************
+          MAIN
+         ARTICLE
+******************************/
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+article img{
+    width: 100vw;
+    max-width: 60%;
+}
+
+
+/* esta es una manera de trabajar una imagen para que
+ no este tan grande
+max-width: 250px;
+float: left; */
+
+
+.h3-titulares{
+    font-size: 24px;
+}
+
+.p-precio{
+    font-size: 18px;
+    margin-top: 0mm;
+}
+
+.p-descuentos{
+    font-size: 16px;
+    margin-top: 0mm;
+}
+
+.p-descripcion{
+    font-size: 16px;
+    margin-top: 0mm;
+}
+
+/*****************************
+          FOOTER
+******************************/
+footer{
+    background-color: white;
+    text-align: center;
+    color:#666;
+}
+
+/*****************************
+          FOOTER
+          SECTION
+******************************/
+.section-footer{
+    margin:0 70px; 
+}
+
+/*****************************
+          FOOTER
+          IMAGEN
+******************************/
+.isection{
+    color: #1259c3;;
+    font-size: 2em;
+}
+/*****************************
+          FOOTER
+          SECTION
+            H4
+******************************/
+.h4section-footer{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+/*****************************
+          FOOTER
+          SECTION
+             P
+******************************/
+.psection-footer{
+    margin-top: 2px;
+    margin-bottom: 50px;
+}   
+
+/*****************************
+          FOOTER
+          SECTION
+          COPYRIGHT
+******************************/
+.section-footer-copy{
+    text-align: left;
+}
+
+
