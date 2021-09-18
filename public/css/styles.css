@@ -1,60 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img{
+    width: 100%;
+}
+
 /*****************************
-          CUERPO
+          HEADER
 ******************************/
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-size:12px;
     margin:0;
     background-color: #ebebeb;
    
 }
 /*****************************
-    CABECERA PRINCIPAL
+            MAIN
 ******************************/
 .main-header{
     background-color:#EAC926;
-}
-
-/*****************************
-    CABECERA PRINCIPAL
-   LOGO MERCADO LIEBRE
-******************************/
-.img-logo{
-    max-width: 40%;
-    display: block;
     padding: 20px;
 }
 
-/*****************************
-    CABECERA PRINCIPAL
-     INPUT BUSQUEDA
-******************************/
-.input-busqueda{
-    margin-left: 5%;
-    max-width: 70%;
+.main-header-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+     /* border: solid 3px red; */
+} 
+
+.div-main-logo{
+    width: 50%;
+    /* border: solid 1px green; */
 }
 
-/*****************************
-    CABECERA PRINCIPAL
-       IMG LUPA
-******************************/
-.ilupa{
-    background-color: white;
-    /* width: 30px;
-    height: 30px; */
-    text-align: center;
-    border: 1px solid #666;
-   /*  margin-top: 3px; */
-    margin-left: 2px;
-    font-size: 15px;
-    margin: 0;
-        
+.main-div-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+    /* border: black solid 5px; */
+    width: 50%;
 }
 
+.div-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: solid white 2px; */
+}
 
-.ilupa i{
-font-size: 90%;
+.div-search input{
+    border-radius: 2px 0px 0px 2px;
+    border: none;
+}
 
+.div-search button{
+    border-radius: 0px 2px 2px 0px;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.div-main-busqueda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: solid 2px purple; */
+}
+
+.div-main-busqueda input{
+    width: 70%;
+    height: 20px;
+}
+
+.div-main-busqueda button{
+    width: 30px;
+    height: 20px;
 }
 
 /*****************************
@@ -62,35 +89,57 @@ font-size: 90%;
      TEXTO COMPRÁ CUOTAS
 ******************************/
 
-.p-header{
+.p-text{
     text-align: center;
+    font-weight: 400;
+    padding:10px;
+    font-size: 15px;
 }
 
 /*****************************
     CABECERA PRINCIPAL
      MENÚ HAMBURGUESA
 ******************************/
+.hamburguer-buttom {
+    background-color:#03264C;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
 
-.nav-header ul{
+
+/*****************************
+    CABECERA PRINCIPAL
+         NAVBAR
+******************************/
+.main-navbar{
+    display: none;
+}
+
+.main-navbar ul{
     list-style: none;
    padding: 0;
-   display: none;
+   margin: 0;
 }
 
-.burger-menu {
-    background: #1259c3;;
-    color: white;
-    margin: auto;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 2mm;
-    border-color: #1259c3;;
+.main-navbar a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+
 }
 
-i.elementi{
+
+/* i.elementi{
     line-height: 30px;
-}
+} */
 
 /*****************************
          BANNER
@@ -105,6 +154,7 @@ i.elementi{
     max-width: auto;
     height: 500px;
 }
+
 
 /*****************************
           MAIN
@@ -121,11 +171,25 @@ i.elementi{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    width: 100%;
+       
 }
 
-article img{
-    width: 100%;
-    
+
+
+main section article i {
+    display: block ;
+    font-size: 16px ;
+    padding: 5px ;
+    width: 30px ;
+    height: 30px ;
+    border: 1px solid #39b54a ;
+    color: #39b54a;
+    background-color: #FFF ;
+    border-radius: 50% ;
+    position: absolute;
+    right: 20px ;
+    top: -15px ;
 }
 
 
@@ -142,6 +206,8 @@ float: left; */
 
 .h3-titulares{
     font-size: 24px;
+    color: #666666;
+    margin: 20px 0 20px 0px;
 }
 
 .p-precio{
@@ -158,33 +224,53 @@ float: left; */
 
 .p-descripcion{
     font-size: 16px;
-    margin-top: 0mm;
-    display: none;
+    margin-top: 20px;
+    color:#666666;
+    
+    
 }
-
 
 .detalle-producto{
     background-color: white;
+    position: relative;
 }
 
 .div-barra{
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
+    background-color: #fff;
 }
+
+.div-precio-descuento{
+    display: flex;
+    
+}
+
+.div-precio-descuento .p-precio{
+    flex-grow: 30;
+}
+
+.div-precio-descuento .p-descuentos{
+    flex-grow: 70;
+}
+
+
+
 
 /*****************************
           MAIN
  Imagen camión de envió de productos
 ******************************/
-.iproductos-section{
+/* .iproductos-section{
     color:#39b54a;
     font-size: 15px;
     padding: auto;
     text-align: center;
     line-height: 30px;
+    position: absolute;
     
-    
-}
+} */
 
 i.iproductos-section{
     line-height: 30px;
@@ -257,22 +343,105 @@ footer{
 /*****************************
          @media
 ******************************/
-@media (min-width:361px){
+@media (min-width:768px){
    .article-productos{
         box-shadow : 0px 0px 10px rgb(100, 100 , 100 );
    }
 
-   .nav-header ul{
-         display: block;
-         
+   .main-header-top-bar{
+       display: flex;
+       justify-content:space-between;
+       /* border: blue solid 3px; */
     }
 
-    .burger-menu{
+    .div-search{
+        align-items: center;
+        /* border: solid red 3px; */
+        margin-left: 20px;
+    }
+
+    .p-text{
+        display: flex;
+        align-items: center;
+      /* border: solid black 3px; */
+    }
+
+    .div-main-busqueda{
+        width: 100%;
+        height: 30px;
+    }
+
+    .div-main-busqueda input{
+        width: 100%;
+        height: 30px;
+    }
+
+    .div-main-busqueda button{
+        height: 30px;
+        margin-right: 0;
+    }
+
+   .main-navbar{
+         display: flex;
+         justify-content: space-between;
+         margin-top: 15px;
+    }
+
+    .main-navbar ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-navbar ul li{
+        margin: 0 7px;
+    }
+
+    .hamburguer-buttom{
         display: none;
+    }
+
+    .h3-titulares{
+        margin-left: 60px;
+    }
+
+
+    .section-principal{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .article-productos{
+        max-width: 100%;
+        margin: 10px;
+        justify-content: space-between;
     }
    
 }
 
-@media (min-width:769px){
+@media (min-width:1200px){
     
+    .main-header-div{
+        width: 50%;
+        border: solid red 2px;
+    }
+    
+    .p-text{
+        width: 50%;
+        flex-direction: row-reverse;
+        border: solid black 2px;
+    }
+
+    .h3-titulares{
+        margin-left: 70px;
+    }
+
+    .section-main{
+        display: flex;
+    }
+    .section-principal{
+        display: flex;
+    }
+
+    
+
 }
