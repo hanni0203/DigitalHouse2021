@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/stylesformulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!--link a los íconos de fontawesome-->
+    <script src="https://kit.fontawesome.com/606e397101.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="main-header">
+    
+        <div class="main-header-top-bar">
+            <div class="main-header-div">
+                <div class="div-main-logo">
+                    <img src="/images/logo-mercado-liebre.svg" alt="logo mercado liebre">
+                </div>
+                <form action="/search" method="POST" class="main-div-search">
+                    <div>
+                        <div class="div-search">
+                            <div class="div-main-busqueda">
+                                <input class="input-busqueda" type="search" name="busqueda" ></input>
+                                <button class="ilupa"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="p-text">
+                <p><i class="fas fa-hand-holding-usd"></i>Comprá en coutas y sin tarjeta de crédito</p>
+            </div>
+        </div>
+        <!--==========================
+                MENÚ HAMBURGUESA
+        ============================-->    
+        <a href="" class="hamburguer-buttom">
+            <i class="fas fa-bars"></i>
+        </a>
+         <!--==========================
+                MENÚ NAVEGACIÓN
+        ============================-->
+        <nav class="main-navbar">
+            <ul> 
+                <li> <a href="">Ofertas</a> </li>
+                <li> <a href="">Tiendas Oficiales</a> </li>
+                <li> <a href="">Vender</a> </li>
+                <li> <a href="">Ayuda</a> </li>
+            </ul>
+        
+            <ul> 
+                <li> <a href="">Crea tu cuenta </a> <i class="fas fa-id-card"></i></li>
+                <li> <a href="">Ingresá </a><i class="fas fa-sign-in-alt"></i> </li>
+                <li> <a href="">Mis compras </a> <i class="fas fa-shopping-basket"></i></li>
+            </ul>
+        </nav>
+        
+        <br/>
+        
+    </header>
+
+
+    <section class="banner">
+        <img class="img"   src="./images/img-home-banner.jpg" alt="banner"/>
+    </section>
+
+     <!--==========================
+                  MAIN
+        ============================--> 
+    
+        <main>
+
+            <!--==========================
+             CREACIÓN EL FORMULARIO
+        ============================-->     
+        <form action="/login" method="POST" class="formulario-main">
+
+            <div class="main-principal">
+
+                <!--==========================
+                    Nombre usuario
+                ============================-->  
+                <div class="control-div control-formulario">
+                    <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario" required>
+                </div>
+
+                <!--==========================
+                    contraseña
+                ============================--> 
+                <div class="control-div control-formulario">
+                    <input type="password" name="password" id="password" placeholder="Elegí contraseña" required>
+                </div>
+
+                <!--==========================
+                        Botón
+                ============================--> 
+
+                <div class="div-button control-formulario">
+                    <div>
+                        <button class="control-button" type="submit" name="enviar" id="enviar">Enviar</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+    <!--==========================
+              FOOTER
+    ============================-->
+    
+    <footer>
+        <section class="section-footer" >
+            <i class="isection fas fa-credit-card"></i>
+            <h4 class="h4section-footer" >Pagá con tarjeta o en efectivo</h4>
+            <p class="psection-footer">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                puntos de pago. ¡Y siempre es seguro!</p>
+        </section>
+
+        <section class="section-footer">
+            <i class="isection fas fa-gift"></i>
+            <h4 class="h4section-footer">Envío gratis desde $ 2.500</h4>
+            <p class="psection-footer">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                productos. Es un beneficio de Mercado Puntos.</p>
+        </section>
+
+        <section class="section-footer">
+            <i class="isection fas fa-user-shield"></i>
+            <h4 class="h4section-footer">Seguridad, de principio a fin</h4>
+            <p class="psection-footer">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                porque estás siempre protegid@.</p>
+        </section>
+
+        <section class="section-footer-copy">
+            <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+        </section>
+    </footer>
+    
+    
+</body>
+</html>
