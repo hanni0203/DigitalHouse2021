@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado Liebre-Register</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/stylesformulario.css">
+    <link rel="stylesheet" href="/css/styles-register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
                             <div class="div-search">
                                 <div class="div-main-busqueda">
                                     <input class="input-busqueda" type="search" name="busqueda" ></input>
-                                    <button class="ilupa"><i class="fas fa-search"></i></button>
+                                    <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -64,9 +64,9 @@
                 </ul>
             
                 <ul> 
-                    <li> <a href="">Crea tu cuenta </a> <i class="fas fa-id-card"></i></li>
-                    <li> <a href="">Ingresá </a><i class="fas fa-sign-in-alt"></i> </li>
-                    <li> <a href="">Mis compras </a> <i class="fas fa-shopping-basket"></i></li>
+                    <li> <a href="/register">Crea tu cuenta </a>  <i class="fas fa-id-card"></i></li>
+                    <li> <a href="/login">Ingresá </a>  <i class="fas fa-sign-in-alt"></i> </li>
+                    <li> <a href="">Mis compras </a>  <i class="fas fa-shopping-basket"></i></li>
                 </ul>
             </nav>
             
@@ -89,158 +89,165 @@
         <!--==========================
              CREACIÓN EL FORMULARIO
         ============================-->     
-        <form action="/register" method="POST" class="formulario-main">
-            <!--==========================
-                 Nombre y Apellido
-            ============================--> 
-            <div class=" main-principal">
-                <div class="control-div control-formulario">
-                    <input type="text" name="nombreYApellido" id="nombreYApellido" placeholder="Nombre y apellido">
-                </div>
-
+            <form action="/register" method="POST" class="formulario-main">
                 <!--==========================
-                    Nombre de usuario
+                    Nombre y Apellido
                 ============================--> 
-                <div class="control-div control-formulario">
-                    <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+                <div class="main-div-form">
+                    <div class="titulo">
+                        <label> Completa tus datos</label>
+                    </div>
+
+                    <div class="main-principal">
+                        <div class="main-principal-primario">
+                            <div class="control-div control-formulario">
+                                <input type="text" name="nombreYApellido" id="nombreYApellido" placeholder="Nombre y apellido">
+                            </div>
+
+                            <!--==========================
+                                Nombre de usuario
+                            ============================--> 
+                            <div class="control-div control-formulario">
+                                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+                            </div>
+
+                            <!--==========================
+                                    Email
+                            ============================--> 
+
+                            <div class="control-div control-formulario">
+                                <input type="email" name="email" id="email" placeholder="E-mail">
+                            </div>
+
+                            <!--==========================
+                                Fecha de Nacimiento
+                            ============================--> 
+
+                            <div class="control-div control-formulario">
+                                <div>
+                                    <label class="label-titulo" for="fechaNacimiento">Fecha de nacimiento</label>
+                                </div>
+                                <div class="control-space-top">
+                                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="mm-dd-yyyy">
+                                </div>
+                            </div>
+
+                            <!--==========================
+                                    Domicilio
+                            ============================--> 
+
+                            <div class="control-div control-formulario">
+                                <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+                            </div>
+                        
+                            <!--==========================
+                                Perfil de Usuario
+                            ============================--> 
+
+                            <div class="control-div perfilUser">
+                                <div>
+                                    <label class="label-titulo" for="perfilUser">Perfil del usuario</label>
+                                </div>
+                                <div class="control-space-top">
+                                    <label><input type="radio" name="perfilUser" id="perfilUser"> Comprador</label>
+                                    <label><input type="radio" name="perfilUser" id="perfilUser"> Vendedor</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-principal-secundario">
+                            <!--==========================
+                                    Intereses
+                            ============================--> 
+
+                            <div class="control-div">
+                                <div>
+                                    <label  class="label-titulo" for="intereses">Intereses</label>
+                                </div>
+                                <div class="intereses">
+                                    <label><input type="checkbox" name="intereses" id="intereses"> Electro</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses"> Moda</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses"> Hogar</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses"> Juguetería</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses"> Vida sana</label>
+                                </div>
+                            </div>
+
+                            <!--==========================
+                                    Foto Usuario
+                            ============================--> 
+                            
+                            <div class="control-div" >
+                                <div>
+                                    <label class="label-titulo" for="fotoUser">Subir foto de usuario</label>
+                                </div>
+                                <div  class="control-space-top">
+                                    <input type="file" name="fotoUser" accept=".jpg, .png">
+                                </div>
+                            </div>
+
+                            <!--==========================
+                                    Contraseña
+                            ============================--> 
+                            <div class="control-div control-formulario">
+                                <div>
+                                    <label class="label-titulo" for="password">Contraseña</label>
+                                </div>
+                                <div>
+                                    <input type="password" name="password">
+                                </div>
+                                <div class="control-space-top">
+                                    <label class="label-titulo" for="password">Confirmar contraseña</label>
+                                </div>
+                                <div>
+                                    <input type="password" name="password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==========================
+                                Botones
+                        ============================--> 
+                    <div class="div-button control-div">
+                        <div>
+                            <button class="control-button" type="submit" name="enviar" id="enviar">Enviar</button>
+                        </div>
+                        <div>
+                            <button class="control-button" type="reset" name="borrar" id="borrar">Borrar</button>
+                        </div>
+                    </div>
                 </div>
-
-                <!--==========================
-                        Email
-                ============================--> 
-
-                <div class="control-div control-formulario">
-                    <input type="email" name="email" id="email" placeholder="E-mail">
-                </div>
-
-                <!--==========================
-                    Fecha de Nacimiento
-                ============================--> 
-
-                <div class="control-div control-formulario">
-                    <div>
-                        <label class="label-titulo" for="fechaNacimiento">Fecha de nacimiento</label>
-                    </div>
-                    <div class="control-space-top">
-                        <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="mm-dd-yyyy">
-                    </div>
-                </div>
-
-                <!--==========================
-                        Domicilio
-                ============================--> 
-
-                <div class="control-div control-formulario">
-                    <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
-                </div>
-
-                <!--==========================
-                    Perfil de Usuario
-                ============================--> 
-
-                <div class="control-div perfilUser">
-                    <div>
-                        <label class="label-titulo" for="perfilUser">Perfil del usuario</label>
-                    </div>
-                    <div class="control-space-top">
-                        <label><input type="radio" name="perfilUser" id="perfilUser"> Comprador</label>
-                        <label><input type="radio" name="perfilUser" id="perfilUser"> Vendedor</label>
-                    </div>
-                </div>
-
-                <!--==========================
-                        Intereses
-                ============================--> 
-
-                <div class="control-div ">
-                    <div>
-                        <label  class="label-titulo" for="intereses">Intereses</label>
-                    </div>
-                    <div class="intereses">
-                        <label><input type="checkbox" name="intereses" id="intereses"> Electro</label>
-                        <label><input type="checkbox" name="intereses" id="intereses"> Moda</label>
-                        <label><input type="checkbox" name="intereses" id="intereses"> Hogar</label>
-                        <label><input type="checkbox" name="intereses" id="intereses"> Juguetería</label>
-                        <label><input type="checkbox" name="intereses" id="intereses"> Vida sana</label>
-                    </div>
-                </div>
-
-                <!--==========================
-                        Foto Usuario
-                ============================--> 
-                
-                <div class="control-div control-formulario" >
-                    <div>
-                        <label class="label-titulo" for="fotoUser">Subir foto de usuario</label>
-                    </div>
-                    <div  class="control-space-top">
-                    <input type="file" name="fotoUser" accept=".jpg, .png">
-                    </div>
-                </div>
-
-                <!--==========================
-                        Contraseña
-                ============================--> 
-                <div class="control-div control-formulario">
-                    <div>
-                        <label class="label-titulo" for="password">Contraseña</label>
-                    </div>
-                    <div class="control-space-top">
-                    <input type="password" name="password">
-                    </div>
-                    <div class="control-space-top">
-                        <label class="label-titulo" for="password">Confirmar contraseña</label>
-                    </div>
-                    <div class="control-space-top">
-                    <input type="password" name="password">
-                    </div>
-                </div>
-
-                <!--==========================
-                        Botones
-                ============================--> 
-
-                <div class="div-button control-div">
-                    <div>
-                        <button class="control-button" type="submit" name="enviar" id="enviar">Send</button>
-                    </div>
-                    <div>
-                        <button class="control-button" type="reset" name="borrar" id="borrar">Reset</button>
-                    </div>
-                </div>
-            </div>
-        </form>
+            </form>
         </main>
 <!--==========================
               FOOTER
     ============================-->
     
     <footer>
-        <section class="section-footer" >
-            <i class="isection fas fa-credit-card"></i>
-            <h4 class="h4section-footer" >Pagá con tarjeta o en efectivo</h4>
-            <p class="psection-footer">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-                puntos de pago. ¡Y siempre es seguro!</p>
-        </section>
+        <div class="footer-principal">
+            <section class="section-footer" >
+                <i class="isection fas fa-credit-card"></i>
+                <h4 class="h4section-footer" >Pagá con tarjeta o en efectivo</h4>
+                <p class="psection-footer">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!</p>
+            </section>
 
-        <section class="section-footer">
-            <i class="isection fas fa-gift"></i>
-            <h4 class="h4section-footer">Envío gratis desde $ 2.500</h4>
-            <p class="psection-footer">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
-                productos. Es un beneficio de Mercado Puntos.</p>
-        </section>
+            <section class="section-footer">
+                <i class="isection fas fa-gift"></i>
+                <h4 class="h4section-footer">Envío gratis desde $ 2.500</h4>
+                <p class="psection-footer">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.</p>
+            </section>
 
-        <section class="section-footer">
-            <i class="isection fas fa-user-shield"></i>
-            <h4 class="h4section-footer">Seguridad, de principio a fin</h4>
-            <p class="psection-footer">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-                porque estás siempre protegid@.</p>
-        </section>
-
+            <section class="section-footer">
+                <i class="isection fas fa-user-shield"></i>
+                <h4 class="h4section-footer">Seguridad, de principio a fin</h4>
+                <p class="psection-footer">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.</p>
+            </section>
+        </div>
         <section class="section-footer-copy">
             <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
         </section>
     </footer>
-    
 </body>
 </html>

@@ -25,6 +25,8 @@ body{
 .main-header{
     background-color:#EAC926;
     padding: 20px;
+    /* position: fixed;
+    margin-top: 0; */
 }
 
 .main-header-div{
@@ -163,9 +165,7 @@ body{
 .section-main{
     margin:auto;
     width: 90%;
-    
 }
-
 
 .article-productos{
     display: flex;
@@ -174,8 +174,6 @@ body{
     width: 100%;
        
 }
-
-
 
 main section article i {
     display: block ;
@@ -204,10 +202,17 @@ float: left; */
  el detalle de productos
 ******************************/
 
+.div-titulares{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .h3-titulares{
     font-size: 24px;
     color: #666666;
-    margin: 20px 0 20px 15px;
+    /* margin: 20px 0 20px 15px; */
 }
 
 
@@ -227,8 +232,6 @@ float: left; */
     font-size: 16px;
     margin-top: 20px;
     color:#666666;
-    
-    
 }
 
 .detalle-producto{
@@ -312,6 +315,7 @@ footer{
 .isection{
     color: #1259c3;
     font-size: 2em;
+    margin-top: 20px;
 }
 /*****************************
           FOOTER
@@ -340,13 +344,72 @@ footer{
 .section-footer-copy{
     text-align: left;
 }
+
+/************************************
+    Pseudoclase :hover al producto
+    transiciones descripción
+    animación camioncito
+*************************************/
+
+.article-productos:hover{
+    box-shadow : 0px 0px 10px rgb(100, 100 , 100 );
+}
+
+main section div.section-principal h4.p-descripcion{
+    position: relative;
+    bottom: 20px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.article-productos:hover  h4.p-descripcion{
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    bottom: 0px;
+} 
+
+.div-barra{
+    height: 50px;
+}
+
+.article-productos:hover .div-barra{
+    height: 90px;
+}
+
+.p-descripcion{
+    transition: bottom 1s, color 1s;
+}
+
+.article-productos{
+    transition: max-height 1s;
+}
+
+.camioncito {
+    transform: rotate(0deg);
+}
+
+.camioncito:hover{
+    transform: rotate(-90deg);
+}
+
+.camioncito{
+    transition: transform 0.5s;
+}
+
+.section-footer i:hover{
+    color: rgb(153, 151, 151);
+}
+
+
+
 /*****************************
          @media
 ******************************/
-@media (min-width:768px){
-   .article-productos{
+@media (min-width:481px){
+   /* .article-productos{
         box-shadow : 0px 0px 10px rgb(100, 100 , 100 );
-   }
+   } */
 
    .main-header-top-bar{
        display: flex;
@@ -363,6 +426,7 @@ footer{
     .p-text{
         display: flex;
         align-items: center;
+        padding: 0;
       /* border: solid black 3px; */
     }
 
@@ -393,7 +457,12 @@ footer{
     }
 
     .main-navbar ul li{
-        margin: 0 7px;
+        margin: 0 3px;
+        
+    }
+
+    .main-navbar a{
+        font-size: 14px;
     }
 
     .hamburguer-buttom{
@@ -401,9 +470,8 @@ footer{
     }
 
     .h3-titulares{
-        margin-left:47px;
+        margin-left: 10px;
     }
-
 
     .section-principal{
         display: flex;
@@ -418,21 +486,17 @@ footer{
    
 }
 
-@media (min-width:1200px){
+@media (min-width:769px){
     
     .main-header-div{
         width: 50%;
-        border: solid red 2px;
+        /* border: solid red 2px; */
     }
     
     .p-text{
         width: 50%;
         flex-direction: row-reverse;
-        border: solid black 2px;
-    }
-
-    .h3-titulares{
-        margin-left: 70px;
+        /* border: solid black 2px; */
     }
 
     .section-main{
@@ -441,6 +505,16 @@ footer{
     .section-principal{
         display: flex;
     }
+
+    footer .footer-principal{
+        display: flex;
+        
+    }
+
+   
+    
+    
+
 
     
 
