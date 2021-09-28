@@ -5,7 +5,7 @@ const app = express();
 const path = require('path');
 
 //levantando servidor
-app.listen(3000, (req, res) => console.log("servidor corriendo", "http:localhost:3000") );
+app.listen(process.env.PORT || 3000, () => console.log("servidor corriendo", "http:localhost:3000") );
 
 //diciendo que la carpeta public es estatica
 app.use(express.static(path.resolve(__dirname, './public') ) );
