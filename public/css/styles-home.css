@@ -333,36 +333,6 @@ footer{
     box-shadow : 0px 0px 10px rgb(100, 100 , 100 );
 }
 
-main section div.section-principal h4.p-descripcion{
-    position: relative;
-    bottom: 20px;
-    z-index: -1;
-    opacity: 0;
-}
-
-.article-productos:hover  h4.p-descripcion{
-    position: relative;
-    z-index: 1;
-    opacity: 1;
-    bottom: 0px;
-} 
-
-.div-barra{
-    height: 50px;
-}
-
-.article-productos:hover .div-barra{
-    height: 90px;
-}
-
-.p-descripcion{
-    transition: bottom 1s, color 1s;
-}
-
-.article-productos{
-    transition: max-height 1s;
-}
-
 .camioncito {
     transform: rotate(0deg);
 }
@@ -373,7 +343,7 @@ main section div.section-principal h4.p-descripcion{
 
 .camioncito{
     transition: transform 0.5s;
-}
+} 
 
 .section-footer i:hover{
     color: rgb(153, 151, 151);
@@ -458,6 +428,53 @@ main section div.section-principal h4.p-descripcion{
         margin: 10px;
         justify-content: space-between;
     }
+
+
+    /************************************
+    Pseudoclase :hover al producto
+    transiciones descripción
+*************************************/
+
+    main section div.section-principal h4.p-descripcion{
+        position: relative;
+        bottom: 40px;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .article-productos:hover  h4.p-descripcion{
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        bottom: 10px;
+    } 
+
+    .div-barra{
+        height: 60px;
+    }
+
+    .article-productos:hover .div-barra{
+        height: 75px;
+    }
+
+    .p-descripcion{
+        transition: bottom 1s;
+    }
+
+    .article-productos{
+        height: 375px;
+        transition: height 1s;
+    }
+
+    .article-productos:hover{
+        height: 400px;
+    }
+
+    footer .footer-principal{
+        margin-top: 20px;
+    }
+
+
    
 }
 
@@ -483,7 +500,21 @@ main section div.section-principal h4.p-descripcion{
 
     footer .footer-principal{
         display: flex;
-        
+        margin-top: 50px;
     }
+
+    .article-productos{
+        height: 245px;
+        transition: max-height 1s;
+    }
+
+    .article-productos:hover{
+        height: 285px;
+    }
+
+    .article-productos:hover  h4.p-descripcion{
+        bottom: 15px;
+    } 
+
 
 }
