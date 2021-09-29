@@ -108,7 +108,7 @@
                                 Nombre de usuario
                             ============================--> 
                             <div class="control-div control-formulario">
-                                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+                                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario" minlength="5" required>
                             </div>
 
                             <!--==========================
@@ -116,7 +116,7 @@
                             ============================--> 
 
                             <div class="control-div control-formulario">
-                                <input type="email" name="email" id="email" placeholder="E-mail">
+                                <input type="email" name="email" id="email" placeholder="E-mail" required>
                             </div>
 
                             <!--==========================
@@ -128,7 +128,7 @@
                                     <label class="label-titulo" for="fechaNacimiento">Fecha de nacimiento</label>
                                 </div>
                                 <div class="control-space-top">
-                                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="mm-dd-yyyy">
+                                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="mm-dd-yyyy" required>
                                 </div>
                             </div>
 
@@ -137,7 +137,7 @@
                             ============================--> 
 
                             <div class="control-div control-formulario">
-                                <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+                                <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" minlength="5" required>
                             </div>
                         
                             <!--==========================
@@ -149,8 +149,8 @@
                                     <label class="label-titulo" for="perfilUser">Perfil del usuario</label>
                                 </div>
                                 <div class="control-space-top">
-                                    <label><input type="radio" name="perfilUser" id="perfilUser"> Comprador</label>
-                                    <label><input type="radio" name="perfilUser" id="perfilUser"> Vendedor</label>
+                                    <label><input type="radio" name="perfilUser" id="perfilUser" > Comprador</label>
+                                    <label><input type="radio" name="perfilUser" id="perfilUser" > Vendedor</label>
                                 </div>
                             </div>
                         </div>
@@ -164,11 +164,11 @@
                                     <label  class="label-titulo" for="intereses">Intereses</label>
                                 </div>
                                 <div class="intereses">
-                                    <label><input type="checkbox" name="intereses" id="intereses"> Electro</label>
-                                    <label><input type="checkbox" name="intereses" id="intereses"> Moda</label>
-                                    <label><input type="checkbox" name="intereses" id="intereses"> Hogar</label>
-                                    <label><input type="checkbox" name="intereses" id="intereses"> Juguetería</label>
-                                    <label><input type="checkbox" name="intereses" id="intereses"> Vida sana</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses" > Electro</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses" > Moda</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses" > Hogar</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses" > Juguetería</label>
+                                    <label><input type="checkbox" name="intereses" id="intereses" > Vida sana</label>
                                 </div>
                             </div>
 
@@ -193,13 +193,13 @@
                                     <label class="label-titulo" for="password">Contraseña</label>
                                 </div>
                                 <div>
-                                    <input type="password" name="password">
+                                    <input type="password" name="password" minlength="5" required>
                                 </div>
                                 <div class="control-space-top">
                                     <label class="label-titulo" for="password">Confirmar contraseña</label>
                                 </div>
                                 <div>
-                                    <input type="password" name="password">
+                                    <input type="password" name="password" minlength="5" required>
                                 </div>
                             </div>
                         </div>
