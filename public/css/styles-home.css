@@ -437,7 +437,7 @@ footer{
 
     main section div.section-principal h4.p-descripcion{
         position: relative;
-        bottom: 40px;
+        bottom: 20px;
         z-index: -1;
         opacity: 0;
     }
@@ -462,16 +462,16 @@ footer{
     }
 
     .article-productos{
-        height: 375px;
-        transition: height 1s;
+       /*  max-height: fit-content;
+        height: fit-content; */
+        display: inline-block;
+        transition: all 1s;
     }
 
-    .article-productos:hover{
-        height: 400px;
-    }
+    
 
-    footer .footer-principal{
-        margin-top: 20px;
+    .footer-principal{
+        margin-top: 100px;
     }
 
 
@@ -494,22 +494,21 @@ footer{
     .section-main{
         display: flex;
     }
+    
     .section-principal{
         display: flex;
     }
 
     footer .footer-principal{
         display: flex;
-        margin-top: 50px;
+        /* margin-top: 120px; */
     }
 
     .article-productos{
-        height: 245px;
+        /* max-height: fit-content;
+        height: fit-content; */
+        display: inline-block;
         transition: max-height 1s;
-    }
-
-    .article-productos:hover{
-        height: 285px;
     }
 
     .article-productos:hover  h4.p-descripcion{
